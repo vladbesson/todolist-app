@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TODO List</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="page__container">
+      <div class="page__main">
+        <h1 class="page__heading">Todo List</h1>
+
+        <div class="todo">
+          <form action="/" method="post" class="todo__form">
+            <input class="todo__input input" type="text" required placeholder="Разобраться в замыканиях">
+            <button class="todo__button button" type="submit">Сохранить</button>
+          </form>
+
+          <ul class="todo__list">
+            <li class="todo__item task">
+              <div class="task__info">
+                <p class="task__name">'Съесть печеньку 🍪</p>
+              </div>
+              <div class="task__controls">
+                <button class="task__btn task__btn_copy" type="button"><img src="./images/duplicate-icon.svg" width="25" height="25" alt="Копировать"></button>
+                <button class="task__btn task__btn_delete" type="button"><img src="./images/delete-icon.svg" width="18" height="17" alt="Удалить"></button>
+              </div>
+            </li>
+            <li class="todo__item task">
+              <div class="task__info">
+                <p class="task__name">Изучить React ⚛️</p>
+              </div>
+              <div class="task__controls">
+                <button class="task__btn task__btn_copy" type="button"><img src="./images/duplicate-icon.svg" width="25" height="25" alt="Копировать"></button>
+                <button class="task__btn task__btn_delete" type="button"><img src="./images/delete-icon.svg" width="18" height="17" alt="Удалить"></button>
+              </div>
+            </li>
+            <li class="todo__item task">
+              <div class="task__info">
+                <p class="task__name">Полить цветы 🌸</p>
+              </div>
+              <div class="task__controls">
+                <button class="task__btn task__btn_copy" type="button"><img src="./images/duplicate-icon.svg" width="25" height="25" alt="Копировать"></button>
+                <button class="task__btn task__btn_delete" type="button"><img src="./images/delete-icon.svg" width="18" height="17" alt="Удалить"></button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="page__footer">
+        <p>© Yandex.Praktikum 2020</p>
+      </div>
+    </div>
+  </div>
+
+<!--  <template class="template">-->
+<!--    <li class="todo__item task">-->
+<!--      <div class="task__info">-->
+<!--        <p class="task__name">Test</p>-->
+<!--      </div>-->
+<!--      <div class="task__controls">-->
+<!--        <button class="task__btn task__btn_copy" type="button"><img src="./images/duplicate-icon.svg" width="25" height="25" alt="Копировать"></button>-->
+<!--        <button class="task__btn task__btn_delete" type="button"><img src="./images/delete-icon.svg" width="18" height="17" alt="Удалить"></button>-->
+<!--      </div>-->
+<!--    </li>-->
+<!--  </template>-->
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
