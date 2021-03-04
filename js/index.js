@@ -7,10 +7,10 @@ const TODO_LIST = [
 ];
 
 const container = document.querySelector('.todo__list');
+const todoForm = document.querySelector('.todo__form');
 
-function renderList() {
-	const result = TODO_LIST.map(function(item) {
-		return `
+function createTaskHTMLString(item) {
+	return `
 			<li class="todo__item task">
 				<div class="task__info">
 					<p class="task__name">${item.title}️</p>
@@ -21,9 +21,24 @@ function renderList() {
 				</div>
 			</li>
 		`;
-	}).join('');
+};
+
+function renderList() {
+	const result = TODO_LIST.map(createTaskHTMLString).join('');
 
 	container.insertAdjacentHTML('afterbegin', result);
 }
 
+function addTaskFormListener(evt) {
+	evt.preventDefault();
+	const input = todoForm.querySelector('.todo__input');
+	const inputTitle = input.value;
+
+	const newTask = createTaskHTMLString({ title: inputTitle });
+	container.insertAdjacentHTML('afterbegin', newTask);
+
+	input.value = '';
+}
+
 renderList();
+todoForm.addEventListener('submit', addTaskFormListener);
